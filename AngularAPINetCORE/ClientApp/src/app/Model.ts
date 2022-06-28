@@ -1,18 +1,28 @@
 export class Model {
-  categoryName;
   products;
 
   constructor() {
-    this.categoryName = "Telefon";
     this.products = [
-      { id: 1, name: "İphone 5", price: 700, isActive: true },
-      { id: 2, name: "İphone 6", price: 1100, isActive: false },
-      { id: 3, name: "İphone 7", price: 2150, isActive: true },
-      { id: 4, name: "İphone 8", price: 3500, isActive: false }
+      new Product(1,"iphone 5",1000,true),
+      new Product(2,"iphone 6",2000,false),
+      new Product(3,"iphone 7",3000,true),
+      new Product(4,"iphone 8",4000,false),
+      new Product(5,"iphone 11",5000,true)
     ];
-
-
   }
 }
 
+export class Product {
+  id: number;
+  name: string;
+  price: number;
+  isActive: boolean;
+
+  constructor(id, name, price, isActive) {
+    this.id = id;
+    this.name = name;
+    this.price = price;
+    this.isActive = isActive;
+  }
+}
 
