@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Model } from './Model';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  model = new Model();
+
+  getCategoryName() {
+    return this.model.categoryName;
+  }
+
+  getProducts() {
+    return this.model.products;
+  }
 }
+
