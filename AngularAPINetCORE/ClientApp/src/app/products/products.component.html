@@ -5,6 +5,7 @@
 <!--<p *ngIf="!forecasts"><em>Loading...</em></p>-->
 
 <br />
+
 <table class='table table-striped' aria-labelledby="tableLabel">
   <thead>
     <tr>
@@ -20,13 +21,14 @@
       <td>{{ product.name }}</td>
       <td>{{ product.price }}</td>
       <td>
-        <button type="button" class="btn btn-primary">Edit</button>
+        <button type="button" class="btn btn-primary" (click)="onSelectProduct(product)">Edit</button>
         <button type="button" class="btn btn-danger ml-2">Delete</button>
       </td>
     </tr>
   </tbody>
 </table>
 <hr />
-<br />
-<app-product-form></app-product-form>
-<br />
+<div class="row" style="margin:30px 0px 30px 0px">
+  <app-product-form class="col-md-6"></app-product-form>
+  <app-product-details class="col-md-6" [product]="selectedProduct"></app-product-details>
+</div>

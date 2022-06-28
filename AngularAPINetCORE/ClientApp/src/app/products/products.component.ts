@@ -10,7 +10,7 @@ import { ProductService } from '../product.service';
 export class ProductsComponent implements OnInit {
 
   products: Product[];
-
+  selectedProduct: Product;
   constructor(private productService: ProductService) {
   }
   
@@ -18,4 +18,7 @@ export class ProductsComponent implements OnInit {
     this.products = this.productService.getProducts();
   }
 
+  onSelectProduct(product: Product) {
+    this.selectedProduct = product;
+  }
 }

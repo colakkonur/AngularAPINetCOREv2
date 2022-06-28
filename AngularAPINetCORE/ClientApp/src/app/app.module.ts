@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ProductFormComponent } from './product-form/product-form.component';
     FetchDataComponent,
     ProductsComponent,
     ProductFormComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
